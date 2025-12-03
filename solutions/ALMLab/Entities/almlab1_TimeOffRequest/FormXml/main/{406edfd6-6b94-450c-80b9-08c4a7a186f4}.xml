@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{406edfd6-6b94-450c-80b9-08c4a7a186f4}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{5523eac5-7d7d-40d5-8394-62dc6d742f93}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{2769b29a-8e0b-447c-a74b-8964e78cdb1f}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5c625ff8-d9d9-420d-8ca7-1ff8d2fe3160}">
+                        <labels>
+                          <label description="Request Name" languagecode="1033" />
+                        </labels>
+                        <control id="almlab1_requestname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="almlab1_requestname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{75ecf471-2be8-4278-8270-f00f82ba8a85}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f939b347-18d9-4820-a1c6-70674a1d46fb}">
+                        <labels>
+                          <label description="Employee" languagecode="1033" />
+                        </labels>
+                        <control id="almlab1_employeeid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="almlab1_employeeid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{62afa58f-cb2e-4d9c-bcfe-2f04cd1986a4}">
+                        <labels>
+                          <label description="Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="almlab1_startdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="almlab1_startdate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b2f95b7-e949-4ade-a733-f9d08afdfcf8}">
+                        <labels>
+                          <label description="End Date" languagecode="1033" />
+                        </labels>
+                        <control id="almlab1_enddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="almlab1_enddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4603da9f-b95d-4262-92bf-18e7b305a3e9}">
+                        <labels>
+                          <label description="Approved" languagecode="1033" />
+                        </labels>
+                        <control id="almlab1_approved" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="almlab1_approved" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
