@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="almlab1_TimeOffRequest_almlab1_Employee" />
+  <EntityRelationship Name="business_unit_almlab1_employee" />
+  <EntityRelationship Name="business_unit_almlab1_timeoffrequest" />
+  <EntityRelationship Name="lk_almlab1_employee_createdby" />
+  <EntityRelationship Name="lk_almlab1_employee_modifiedby" />
+  <EntityRelationship Name="lk_almlab1_timeoffrequest_createdby" />
+  <EntityRelationship Name="lk_almlab1_timeoffrequest_modifiedby" />
+  <EntityRelationship Name="owner_almlab1_employee" />
+  <EntityRelationship Name="owner_almlab1_timeoffrequest" />
+  <EntityRelationship Name="team_almlab1_employee" />
+  <EntityRelationship Name="team_almlab1_timeoffrequest" />
+  <EntityRelationship Name="user_almlab1_employee" />
+  <EntityRelationship Name="user_almlab1_timeoffrequest" />
+</EntityRelationships>
