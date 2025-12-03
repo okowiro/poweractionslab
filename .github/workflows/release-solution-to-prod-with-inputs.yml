@@ -111,6 +111,10 @@ jobs:
       with:
         lfs: true
 
+    # Install Power Platform CLI (required for v1 actions)
+    - name: Install Power Platform tools
+      uses: microsoft/powerplatform-actions/actions-install@v1
+
     - name: Fetch the ready to ship solution from GH artifact store
       uses: actions/download-artifact@v4
       with:
