@@ -7,7 +7,7 @@ on:
     inputs: 
       #Do Not change these values
       #Values are set by the caller
-      #caller sample: release-action-call.ymnl
+      #caller sample: release-action-call2.ymnl
       solution_name:
         description: 'The solution name.'
         type: string
