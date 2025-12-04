@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a5ff8171-6330-4ffa-af5e-e61165671ca7}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{e7146a21-45d0-4181-bf26-11710952b44f}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8fa34c8b-19a7-4918-86e8-db817adab0ec}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{750ec42f-48aa-4f5f-b8c8-8080c1e12a8f}">
+                        <labels>
+                          <label description="PTO Name" languagecode="1033" />
+                        </labels>
+                        <control id="almlab5_ptoname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="almlab5_ptoname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bf5d2da7-1200-4f8b-bb88-cc7556f00db1}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9029697b-0d15-4a6c-8ba7-f817a97e574c}">
+                        <labels>
+                          <label description="Employee" languagecode="1033" />
+                        </labels>
+                        <control id="almlab5_employeeid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="almlab5_employeeid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0d8419cd-5556-4189-b3a4-193aea5f8eb7}">
+                        <labels>
+                          <label description="Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="almlab5_startdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="almlab5_startdate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f5605207-9ef2-4745-9c05-95397631f179}">
+                        <labels>
+                          <label description="End Date" languagecode="1033" />
+                        </labels>
+                        <control id="almlab5_enddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="almlab5_enddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8ec79254-af14-426c-ba3e-13ace365505e}">
+                        <labels>
+                          <label description="Approved" languagecode="1033" />
+                        </labels>
+                        <control id="almlab5_approved" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="almlab5_approved" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
