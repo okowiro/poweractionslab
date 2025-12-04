@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="almlab5_PaidTimeOff_almlab5_Employee" />
+  <EntityRelationship Name="business_unit_almlab5_employee" />
+  <EntityRelationship Name="business_unit_almlab5_paidtimeoff" />
+  <EntityRelationship Name="lk_almlab5_employee_createdby" />
+  <EntityRelationship Name="lk_almlab5_employee_modifiedby" />
+  <EntityRelationship Name="lk_almlab5_paidtimeoff_createdby" />
+  <EntityRelationship Name="lk_almlab5_paidtimeoff_modifiedby" />
+  <EntityRelationship Name="owner_almlab5_employee" />
+  <EntityRelationship Name="owner_almlab5_paidtimeoff" />
+  <EntityRelationship Name="team_almlab5_employee" />
+  <EntityRelationship Name="team_almlab5_paidtimeoff" />
+  <EntityRelationship Name="user_almlab5_employee" />
+  <EntityRelationship Name="user_almlab5_paidtimeoff" />
+</EntityRelationships>
