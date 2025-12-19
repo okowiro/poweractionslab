@@ -1,0 +1,45 @@
+name: PAC Auth Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pac-auth:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Power Platform CLI
+      uses: microsoft/powerplatform-actions/actions-install@v1
+
+    # Optional sanity check (safe)
+    - name: Verify PAC installation
+      shell: pwsh
+      run: |
+        & "${env:POWERPLATFORMTOOLS_PACPATH}" help
+
+    - name: Authenticate with PAC CLI
+      shell: pwsh
+      env:
+        CLIENTID: ${{ secrets.PP_CLIENT_ID }}
+        CLIENTSECRET: ${{ secrets.PP_CLIENT_SECRET }}
+        TENANTID: ${{ secrets.PP_TENANT_ID }}
+      run: |
+        & "${env:POWERPLATFORMTOOLS_PACPATH}" auth create `
+          --kind ADMIN `
+          --applicationId $env:CLIENTID `
+          --clientSecret $env:CLIENTSECRET `
+          --tenant $env:TENANTID
+
+    - name: Echo Client ID
+      shell: pwsh
+      run: |
+        Write-Host "CLIENTID = $env:CLIENTID"
+
+
+    - name: List Power Platform environments
+      shell: pwsh
+      run: |
+        & "${env:POWERPLATFORMTOOLS_PACPATH}" admin list
