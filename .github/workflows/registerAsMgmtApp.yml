@@ -6,23 +6,35 @@ on:
 jobs:
   registerAsMgmtApp:
     runs-on: windows-latest
-    
+
     steps:
       - name: Install PowerApps modules
-        shell: pwsh
+        shell: powershell
         run: |
+          Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
           Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -Scope CurrentUser -AllowClobber -Force
           Install-Module -Name Microsoft.PowerApps.PowerShell -Scope CurrentUser -AllowClobber -Force
-    
-      - name: Connect with service principal
-        shell: pwsh
+
+      - name: Connect and list environments (Service Principal)
+        shell: powershell
         env:
           CLIENTID: ${{ secrets.PP_CLIENT_ID }}
           CLIENTSECRET: ${{ secrets.PP_CLIENT_SECRET }}
           TENANTID: ${{ secrets.PP_TENANT_ID }}
         run: |
+          # Helpful debugging
+          $PSVersionTable
+          Get-Module Microsoft.PowerApps* -ListAvailable | Select Name, Version | Sort Name
+
+          # Authenticate (non-interactive)
           Add-PowerAppsAccount `
-            -TenantId $env:TENANTID `
+            -Endpoint "prod" `
+            -TenantID $env:TENANTID `
             -ApplicationId $env:CLIENTID `
             -ClientSecret $env:CLIENTSECRET
-          Get-AdminPowerAppEnvironment
+
+          # (Optional) register as management app
+          New-PowerAppManagementApp -ApplicationId $env:CLIENTID
+
+          # Verify access
+          Get-AdminPowerAppEnvironment | Select-Object DisplayName, EnvironmentName, EnvironmentType
