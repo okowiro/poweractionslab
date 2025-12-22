@@ -11,8 +11,8 @@ jobs:
       - name: Install PowerApps modules
         shell: pwsh
         run: |
-          Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -Scope CurrentUser -Force
-          Install-Module -Name Microsoft.PowerApps.PowerShell -Scope CurrentUser -Force
+          Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -Scope CurrentUser -AllowClobber -Force
+          Install-Module -Name Microsoft.PowerApps.PowerShell -Scope CurrentUser -AllowClobber -Force
     
       - name: Connect with service principal
         shell: pwsh
