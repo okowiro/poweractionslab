@@ -1,0 +1,31 @@
+name: Register As Management Application
+
+on:
+  workflow_dispatch:
+
+jobs:
+  registerAsMgmtApp:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Install PowerApps modules
+        shell: pwsh
+        run: |
+          Install-Module -Name Microsoft.PowerApps.Administration.PowerShell -Scope CurrentUser -Force
+          Install-Module -Name Microsoft.PowerApps.PowerShell -Scope CurrentUser -Force
+    
+      - name: Connect with service principal
+        shell: pwsh
+        env:
+          CLIENTID: ${{ secrets.PP_CLIENT_ID }}
+          CLIENTSECRET: ${{ secrets.PP_CLIENT_SECRET }}
+          TENANTID: ${{ secrets.PP_TENANT_ID }}
+        run: |
+          $clientId     = "${{ $env:CLIENTID }}"
+          $clientSecret = "${{ $env:CLIENTSECRET }}"
+          $tenantId     = "${{ $env:TENANTID }}"
+    
+          Add-PowerAppsAccount `
+            -TenantId $tenantId `
+            -ApplicationId $clientId `
+            -ClientSecret $clientSecret
