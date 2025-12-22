@@ -28,17 +28,10 @@ jobs:
         TENANTID: ${{ secrets.PP_TENANT_ID }}
       run: |
         & "${env:POWERPLATFORMTOOLS_PACPATH}" auth create `
-          --kind ADMIN `
           --applicationId $env:CLIENTID `
           --clientSecret $env:CLIENTSECRET `
           --tenant $env:TENANTID
-
-    - name: Echo Client ID
-      shell: pwsh
-      run: |
-        Write-Host "CLIENTID = $env:CLIENTID"
-
-
+          
     - name: List Power Platform environments
       shell: pwsh
       run: |
