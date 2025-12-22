@@ -25,3 +25,4 @@ jobs:
             -TenantId $env:TENANTID `
             -ApplicationId $env:CLIENTID `
             -ClientSecret $env:CLIENTSECRET
+          Get-AdminPowerAppEnvironment
